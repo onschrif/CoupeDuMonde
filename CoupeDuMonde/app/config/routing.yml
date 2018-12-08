@@ -1,0 +1,11 @@
+examen_reclamation:
+    resource: "@ExamenReclamationBundle/Resources/config/routing.yml"
+    prefix:   /Reclamations
+
+coupedumonde:
+    resource: "@coupedumondeBundle/Resources/config/routing.yml"
+    prefix:   /Koura
+
+app:
+    resource: '@AppBundle/Controller/'
+    type: annotation

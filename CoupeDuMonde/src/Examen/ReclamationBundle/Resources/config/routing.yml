@@ -1,0 +1,15 @@
+examen_reclamation_homepage:
+    path:     /
+    defaults: { _controller: ExamenReclamationBundle:Default:index }
+AjoutReclamation:
+    path:     /ajoutReclamation
+    defaults: { _controller: ExamenReclamationBundle:Reclamation:ajout }
+AffichageReclamation:
+    path:     /affichageReclamation
+    defaults: { _controller: ExamenReclamationBundle:Reclamation:Affichage }
+TraiterReclamation:
+    path:     /traiterReclamation/{id}
+    defaults: { _controller: ExamenReclamationBundle:Reclamation:Traiter }
+rechercheReclamation:
+    path:     /rechercheReclamation
+    defaults: { _controller: ExamenReclamationBundle:Reclamation:rechercher }

@@ -1,0 +1,23 @@
+<html>
+
+<body>
+
+<h3>Liste des équipes</h3>
+
+
+
+    {% for equipe in equipes %}
+
+        <li><strong>{{ equipe.pays }}</strong></li>
+        <ul type="circle">
+            <li>Coach : {{ equipe.Coach }} </li>
+            <li>Capitaine : {{ equipe.Capitaine }} </li>
+        </ul>
+
+        <p>--------------------------------------------------------------</p>
+
+    {% endfor %}
+
+
+</body>
+</html>

@@ -1,0 +1,24 @@
+<html>
+
+<body>
+
+<h3>Liste des parties</h3>
+
+
+
+{% for partie in parties %}
+
+    <li><strong>{{ partie.Equipe1.pays }} - {{ partie.Equipe2.pays }} </strong></li>
+    <ul type="circle">
+        <li>Lieu : {{ partie.Lieu }} </li>
+        <li>Date : {{ partie.DateMatch }} </li>
+        <li>Heure : {{ partie.Heure }} </li>
+    </ul>
+
+    <p>--------------------------------------------------------------</p>
+
+{% endfor %}
+
+
+</body>
+</html>

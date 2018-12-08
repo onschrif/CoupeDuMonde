@@ -1,0 +1,18 @@
+coupedumonde_homepage:
+    path:     /
+    defaults: { _controller: coupedumondeBundle:Default:index }
+ajoutEquipe:
+    path:     /ajoutEquipe
+    defaults: { _controller: coupedumondeBundle:Equipe:ajout }
+affichageEquipe:
+    path:     /affichageEquipe
+    defaults: { _controller: coupedumondeBundle:Equipe:affiche }
+ajoutPartie:
+    path:     /ajoutPartie
+    defaults: { _controller: coupedumondeBundle:Partie:ajout }
+affichagePartie:
+    path:     /affichagePartie
+    defaults: { _controller: coupedumondeBundle:Partie:afficher }
+recherchePartie:
+    path:     /recherchePartie
+    defaults: { _controller: coupedumondeBundle:Partie:rechercher }

@@ -1,0 +1,15 @@
+<html>
+<body>
+
+<h3>
+    Ajouter une Equipe
+</h3>
+
+<form action="{{ path('ajoutEquipe') }}" method="POST">
+    {{ form(form) }}
+
+    {{ form_errors(form) }}
+</form>
+
+</body>
+</html>

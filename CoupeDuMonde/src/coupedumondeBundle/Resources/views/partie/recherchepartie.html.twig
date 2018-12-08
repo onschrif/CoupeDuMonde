@@ -1,0 +1,35 @@
+<html>
+
+<body>
+
+<h3>Chercher des parties</h3>
+
+<form method="POST" action="{{ path('recherchePartie') }}">
+    Date :
+    <input type="text" placeholder="Date du match" name="date" />
+    Equipe :
+    <select name="equipe">
+        <option value="Selectionner une équipe"> Selectionner une équipe </option>
+        {% for equipe in equipes %}
+            <option value="{{ equipe.pays }}"> {{ equipe.pays }} </option>
+        {% endfor %}
+    </select>
+    <input  type="submit" id="c1" value="Rechercher" />
+</form>
+
+{% for partie in parties %}
+
+    <li><strong>{{ partie.Equipe1.pays }} - {{ partie.Equipe2.pays }} </strong></li>
+    <ul type="circle">
+        <li>Lieu : {{ partie.Lieu }} </li>
+        <li>Date : {{ partie.DateMatch }} </li>
+        <li>Heure : {{ partie.Heure }} </li>
+    </ul>
+
+    <p>--------------------------------------------------------------</p>
+
+{% endfor %}
+
+
+</body>
+</html>

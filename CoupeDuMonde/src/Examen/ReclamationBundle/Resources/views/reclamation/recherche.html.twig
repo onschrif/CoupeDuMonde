@@ -1,0 +1,48 @@
+<html>
+
+<body>
+
+<h3>Chercher des réclamations</h3>
+
+<form method="POST" action="{{ path('rechercheReclamation') }}">
+    Enseignant :
+    <input type="text" placeholder="enseignant réclamé" name="enseignant" />
+    Statut :
+    <input type="text" placeholder="statut" name="statut" />
+    <input  type="submit" id="c1" value="Rechercher" />
+</form>
+
+<table border="2">
+
+    <th>Matricule</th>
+    <th>Nom</th>
+    <th>Prénom</th>
+    <th>Classe</th>
+    <th>Enseignant</th>
+    <th>Motif</th>
+    <th>Statut</th>
+    <th>Traiter</th>
+
+    {% for reclamation in Reclamations %}
+
+        <tr>
+            <td>{{ reclamation.matricule }}</td>
+            <td>{{ reclamation.nom }}</td>
+            <td>{{ reclamation.prenom }}</td>
+            <td>{{ reclamation.classe.libelle }}</td>
+            <td>{{ reclamation.enseignant }}</td>
+            <td>{{ reclamation.motif }}</td>
+            <td>{{ reclamation.statut }}</td>
+            <td>
+                <a href="{{ path('TraiterReclamation',{'id':reclamation.matricule}) }}"><span>Traiter</span></a>
+
+            </td>
+
+        </tr>
+
+    {% endfor %}
+</table>
+
+
+</body>
+</html>
